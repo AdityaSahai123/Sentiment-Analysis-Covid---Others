@@ -2,11 +2,11 @@ import string
 from collections import Counter
 import matplotlib.pyplot as plt
 import streamlit as st
-
 import data
-
 #t = open('read.txt', encoding='utf-8').read()
 st.title("SENTIMENT ANALYSIS")
+
+#st.image(image, caption='Uploaded Image.')
 st.image('Sent1.jpg')
 st.markdown(""" This is a web app based on “Sentiment Analysis using Machine Learning”, 
  it will categorize the text into various categories like happy, angry, cheated, attracted,
@@ -38,19 +38,6 @@ if st.button("Graph"):
     print(final_words)
 
     emotion_list = []
-    # with open('emotions.json', 'r') as file:
-    #     for line in file:
-    #         clear_line = line.replace("\n", '').replace(",", '').replace("'", '').strip()
-    #         word, emotion = clear_line.split(':')
-    #
-    #
-    #         if word in final_words:
-    #             #print("ggghgjhgkhg")
-    #             emotion_list.append(emotion)
-    # with open("emotions.json", 'r') as j:
-
-    # with open("emotions.json", 'r') as r:
-    #     emotion = json.loads(r.read())
     emotion = data.dic
     for i in final_words:
         if i in emotion.keys():
